@@ -1519,7 +1519,24 @@ header .brand-sub,.brand-sub{
  color:#b8daf4!important;
  text-shadow:0 0 10px rgba(83,165,222,.20)!important
 }
-</style></body></html>
+</style>
+<style id="frb-hero-background-fallback">
+/* Keep the heroes artwork visible whenever autoplay video is unavailable or reduced motion is enabled. */
+#home .hero{
+ background:linear-gradient(115deg,rgba(7,18,31,.50),rgba(11,25,42,.28) 56%,rgba(7,18,31,.52)),url("assets/alliance-march-poster.png") center 50%/cover no-repeat!important
+}
+/* Replace the older snow-dot overlay with a soft readable tint over the heroes. */
+#home .hero:before{
+ background:linear-gradient(180deg,rgba(7,18,31,.12),rgba(7,18,31,.18) 54%,rgba(7,18,31,.42))!important;
+ animation:none!important;opacity:1!important
+}
+#home .hero:after{animation:none!important}
+@media(prefers-reduced-motion:reduce){
+ #home .hero-video{display:none!important}
+ #home .hero:before,#home .hero:after{animation:none!important}
+}
+</style>
+</body></html>
 
 
 
