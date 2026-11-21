@@ -502,22 +502,40 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{ou
 </style>
 
 <style id="homepage-server-timeline-glass-blue-outline">
-/* Transparent #FFD700 glass surface with the site's glossy blue outline. */
-#homepage-server-timeline .timeline-panel{
- border:1px solid transparent;
- background:linear-gradient(135deg,rgba(255,215,0,.12),rgba(255,215,0,.07) 52%,rgba(255,215,0,.11)) padding-box,linear-gradient(112deg,#dcedfb 0%,#71a9d4 19%,#c8e5fb 38%,#315879 58%,#acd0f4 78%,#4b7da4 100%) border-box;
- -webkit-backdrop-filter:blur(12px) saturate(125%);backdrop-filter:blur(12px) saturate(125%);
- box-shadow:0 0 0 1px rgba(118,176,218,.58),0 0 13px rgba(82,149,198,.5),0 0 28px rgba(49,88,121,.3),0 10px 34px rgba(1,8,18,.3),inset 0 1px 0 rgba(255,255,255,.23)
-}
-#homepage-server-timeline .timeline-panel:hover{box-shadow:0 0 0 1px rgba(210,236,255,.88),0 0 18px rgba(113,169,212,.65),0 0 32px rgba(49,88,121,.34),0 10px 34px rgba(1,8,18,.3),inset 0 1px 0 rgba(255,255,255,.3)}
-#homepage-server-timeline .timeline-heading h2{color:#f5f8fc;text-shadow:0 1px 5px rgba(9,27,43,.45)}
-#homepage-server-timeline .timeline-subtitle{color:#e2ebf3}
-#homepage-server-timeline .timeline-caveat{color:#cfdae4}
-#homepage-server-timeline .timeline-date-control{color:#edf4fa}
-#homepage-server-timeline .timeline-stop .stop-day{color:#f1f6fb;text-shadow:0 1px 5px rgba(9,27,43,.48)}
-#homepage-server-timeline .timeline-stop .stop-label{color:#e0eaf2;text-shadow:0 1px 4px rgba(9,27,43,.44)}
-#homepage-server-timeline .timeline-legend{color:#dce8f1}
+/* Match the homepage glass cards: dark translucent fill, fine blue edge, and soft blur. */
+#homepage-server-timeline .timeline-panel{position:relative;border:1px solid rgba(164,194,220,.42);border-radius:12px;background:rgba(11,28,45,.60);color:#eef4fa;box-shadow:0 8px 24px rgba(2,9,17,.25),inset 0 1px rgba(255,255,255,.08);backdrop-filter:blur(12px) saturate(125%);-webkit-backdrop-filter:blur(12px) saturate(125%);transition:border-color .2s ease,box-shadow .2s ease}
+#homepage-server-timeline .timeline-panel:hover{border-color:rgba(155,199,244,.72);box-shadow:0 8px 26px rgba(2,9,17,.3),0 0 16px rgba(94,155,204,.20),inset 0 1px rgba(255,255,255,.1)}
+#homepage-server-timeline .timeline-panel:before{display:none}
+#homepage-server-timeline .timeline-heading h2{color:#f2f6fa;text-shadow:none}#homepage-server-timeline .timeline-clock{color:#9bc7f4}
+#homepage-server-timeline .timeline-subtitle{color:#aebfd1}#homepage-server-timeline .timeline-caveat{color:#9eb3c8}#homepage-server-timeline .timeline-date-control{color:#c0cddd}
+#homepage-server-timeline .timeline-day-badge{background:linear-gradient(135deg,rgba(49,88,121,.65),rgba(28,59,88,.72));border-color:rgba(232,200,120,.7);color:#f4d994}
+#homepage-server-timeline .timeline-stop .stop-day{color:#dce9f6;text-shadow:none}#homepage-server-timeline .timeline-stop .stop-label{color:#c9d7e4;text-shadow:none}
+#homepage-server-timeline .timeline-detail{position:relative;border:1px solid rgba(164,194,220,.42);border-radius:10px;background:rgba(11,28,45,.60);box-shadow:0 8px 24px rgba(2,9,17,.25),inset 0 1px rgba(255,255,255,.08);backdrop-filter:blur(12px) saturate(125%);-webkit-backdrop-filter:blur(12px) saturate(125%)}
+#homepage-server-timeline .timeline-detail:before{content:"";position:absolute;inset:0 auto 0 0;width:3px;border-radius:10px 0 0 10px;background:linear-gradient(180deg,#e8c878,#9bc7f4,#e8c878);opacity:.85}
+#homepage-server-timeline .timeline-detail .detail-day{color:#f4d994}#homepage-server-timeline .timeline-detail .detail-title{color:#f5f8fc}#homepage-server-timeline .timeline-detail p{color:#c4d3e0}#homepage-server-timeline .timeline-detail .detail-when{color:#f4d994}
+#homepage-server-timeline .timeline-legend{color:#b8c7d6}
 @media(prefers-reduced-motion:reduce){#homepage-server-timeline .timeline-panel{transition:none}}
+#homepage-server-timeline .timeline-detail[data-key="launch"]{background:radial-gradient(circle at 12% 18%,rgba(232,200,120,.13),transparent 17%),linear-gradient(31deg,rgba(49,88,121,.48),rgba(11,28,45,.64) 72%)}
+#homepage-server-timeline .timeline-detail[data-key="gen2"]{background:radial-gradient(circle at 35% 47%,rgba(232,200,120,.13),transparent 20%),linear-gradient(58deg,rgba(49,88,121,.48),rgba(11,28,45,.64) 72%)}
+#homepage-server-timeline .timeline-detail[data-key="pet1"]{background:radial-gradient(circle at 58% 76%,rgba(232,200,120,.13),transparent 23%),linear-gradient(85deg,rgba(49,88,121,.48),rgba(11,28,45,.64) 72%)}
+#homepage-server-timeline .timeline-detail[data-key="fire-era"]{background:radial-gradient(circle at 81% 41%,rgba(232,200,120,.13),transparent 26%),linear-gradient(112deg,rgba(49,88,121,.48),rgba(11,28,45,.64) 72%)}
+#homepage-server-timeline .timeline-detail[data-key="svs-koi"]{background:radial-gradient(circle at 26% 70%,rgba(232,200,120,.13),transparent 17%),linear-gradient(139deg,rgba(49,88,121,.48),rgba(11,28,45,.64) 72%)}
+#homepage-server-timeline .timeline-detail[data-key="pet2"]{background:radial-gradient(circle at 49% 35%,rgba(232,200,120,.13),transparent 20%),linear-gradient(166deg,rgba(49,88,121,.48),rgba(11,28,45,.64) 72%)}
+#homepage-server-timeline .timeline-detail[data-key="gen3"]{background:radial-gradient(circle at 72% 64%,rgba(232,200,120,.13),transparent 23%),linear-gradient(193deg,rgba(49,88,121,.48),rgba(11,28,45,.64) 72%)}
+#homepage-server-timeline .timeline-detail[data-key="pet3"]{background:radial-gradient(circle at 17% 29%,rgba(232,200,120,.13),transparent 26%),linear-gradient(220deg,rgba(49,88,121,.48),rgba(11,28,45,.64) 72%)}
+#homepage-server-timeline .timeline-detail[data-key="crystal-lab"]{background:radial-gradient(circle at 40% 58%,rgba(232,200,120,.13),transparent 17%),linear-gradient(247deg,rgba(49,88,121,.48),rgba(11,28,45,.64) 72%)}
+#homepage-server-timeline .timeline-detail[data-key="chief-gear"]{background:radial-gradient(circle at 63% 23%,rgba(232,200,120,.13),transparent 20%),linear-gradient(274deg,rgba(49,88,121,.48),rgba(11,28,45,.64) 72%)}
+#homepage-server-timeline .timeline-detail[data-key="gen4"]{background:radial-gradient(circle at 86% 52%,rgba(232,200,120,.13),transparent 23%),linear-gradient(301deg,rgba(49,88,121,.48),rgba(11,28,45,.64) 72%)}
+#homepage-server-timeline .timeline-detail[data-key="pet45"]{background:radial-gradient(circle at 31% 81%,rgba(232,200,120,.13),transparent 26%),linear-gradient(328deg,rgba(49,88,121,.48),rgba(11,28,45,.64) 72%)}
+#homepage-server-timeline .timeline-detail[data-key="war-academy"]{background:radial-gradient(circle at 54% 46%,rgba(232,200,120,.13),transparent 17%),linear-gradient(355deg,rgba(49,88,121,.48),rgba(11,28,45,.64) 72%)}
+#homepage-server-timeline .timeline-detail[data-key="gen5"]{background:radial-gradient(circle at 77% 75%,rgba(232,200,120,.13),transparent 20%),linear-gradient(22deg,rgba(49,88,121,.48),rgba(11,28,45,.64) 72%)}
+#homepage-server-timeline .timeline-detail[data-key="pet67"]{background:radial-gradient(circle at 22% 40%,rgba(232,200,120,.13),transparent 23%),linear-gradient(49deg,rgba(49,88,121,.48),rgba(11,28,45,.64) 72%)}
+#homepage-server-timeline .timeline-detail[data-key="fc68"]{background:radial-gradient(circle at 45% 69%,rgba(232,200,120,.13),transparent 26%),linear-gradient(76deg,rgba(49,88,121,.48),rgba(11,28,45,.64) 72%)}
+#homepage-server-timeline .timeline-detail[data-key="gen6"]{background:radial-gradient(circle at 68% 34%,rgba(232,200,120,.13),transparent 17%),linear-gradient(103deg,rgba(49,88,121,.48),rgba(11,28,45,.64) 72%)}
+#homepage-server-timeline .timeline-detail[data-key="gen7"]{background:radial-gradient(circle at 13% 63%,rgba(232,200,120,.13),transparent 20%),linear-gradient(130deg,rgba(49,88,121,.48),rgba(11,28,45,.64) 72%)}
+#homepage-server-timeline .timeline-detail[data-key="fc910"]{background:radial-gradient(circle at 36% 28%,rgba(232,200,120,.13),transparent 23%),linear-gradient(157deg,rgba(49,88,121,.48),rgba(11,28,45,.64) 72%)}
+#homepage-server-timeline .timeline-detail[data-key="gen8"]{background:radial-gradient(circle at 59% 57%,rgba(232,200,120,.13),transparent 26%),linear-gradient(184deg,rgba(49,88,121,.48),rgba(11,28,45,.64) 72%)}
+#homepage-server-timeline .timeline-detail[data-key="gen9"]{background:radial-gradient(circle at 82% 22%,rgba(232,200,120,.13),transparent 17%),linear-gradient(211deg,rgba(49,88,121,.48),rgba(11,28,45,.64) 72%)}
 </style>
 </head>
 <body>
