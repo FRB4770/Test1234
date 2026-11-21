@@ -388,7 +388,7 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{ou
 </nav></header>
 <main>
 <section id="home" class="page">
-<div class="hero"><div class="hero-video-wrap" aria-hidden="true"><video id="hero-background-video" class="hero-video" autoplay muted loop playsinline preload="metadata" poster="assets/alliance-march-poster.png"><source src="assets/eight-heroes-marching.mp4" type="video/mp4"></video></div><div class="hero-content"><div class="eyebrow" data-i="eyebrow">WHITEOUT SURVIVAL • FRB ALLIANCE HUB</div><h1 data-i="title">Built to Win.</h1><p class="hero-intro">Alliance strategy, live timers and field guides for Whiteout Survival.</p><input id="search" class="search" data-i-ph="search" placeholder="Search guides, events and strategies..."><div class="hero-actions"><a class="action primary" href="#featured">EXPLORE GUIDES <span aria-hidden="true">↓</span></a><a class="action subtle" href="#timers">LIVE SERVER TIMERS <span aria-hidden="true">→</span></a></div><div class="hero-stats"><div class="hero-stat"><span>FOCUS</span><strong>War · Events · Growth</strong></div><div class="hero-stat"><span>TIME</span><strong>UTC schedules</strong></div><div class="hero-stat"><span>FIELD LIBRARY</span><strong>Guides · Timers · Tools</strong></div></div><div class="hero-scroll">SCROLL TO EXPLORE <span aria-hidden="true">⌄</span></div></div></div><section id="searchresults" class="grid hidden" aria-live="polite" style="margin-top:14px"></section>
+<div class="hero"><div class="hero-video-wrap" aria-hidden="true"><video id="hero-background-video" class="hero-video" autoplay muted loop playsinline preload="auto"><source src="assets/frb-heroes-background.mp4" type="video/mp4"></video></div><div class="hero-content"><div class="eyebrow" data-i="eyebrow">WHITEOUT SURVIVAL • FRB ALLIANCE HUB</div><h1 data-i="title">Built to Win.</h1><p class="hero-intro">Alliance strategy, live timers and field guides for Whiteout Survival.</p><input id="search" class="search" data-i-ph="search" placeholder="Search guides, events and strategies..."><div class="hero-actions"><a class="action primary" href="#featured">EXPLORE GUIDES <span aria-hidden="true">↓</span></a><a class="action subtle" href="#timers">LIVE SERVER TIMERS <span aria-hidden="true">→</span></a></div><div class="hero-stats"><div class="hero-stat"><span>FOCUS</span><strong>War · Events · Growth</strong></div><div class="hero-stat"><span>TIME</span><strong>UTC schedules</strong></div><div class="hero-stat"><span>FIELD LIBRARY</span><strong>Guides · Timers · Tools</strong></div></div><div class="hero-scroll">SCROLL TO EXPLORE <span aria-hidden="true">⌄</span></div></div></div><section id="searchresults" class="grid hidden" aria-live="polite" style="margin-top:14px"></section>
 <div class="sectionhead" id="timers"><h2 data-i="timers">Live Server Timers · UTC</h2><span class="pill">UTC</span></div>
 <div class="primary-timers">
   <div class="card reset-card">
@@ -1158,25 +1158,11 @@ header{border-bottom-color:#425d78!important}
  position:relative;isolation:isolate;display:grid;place-items:center;
  width:100vw;min-height:calc(100svh - 64px);margin: -30px 0 36px calc(50% - 50vw);
  padding:clamp(46px,8vh,90px) 24px;overflow:hidden;border:0!important;border-radius:0!important;
- background:linear-gradient(180deg,rgba(8,20,34,.30),rgba(8,20,34,.82)),radial-gradient(ellipse at 50% 36%,#314d6b 0%,#172d45 43%,#0b1929 100%)!important;
+ background:none!important;
  box-shadow:inset 0 -1px 0 rgba(209,176,111,.38)!important;text-align:center
 }
-#home .hero:before{
- content:"";position:absolute;inset:-18%;z-index:0;pointer-events:none;
- background:
-  radial-gradient(ellipse at 20% 28%,rgba(189,216,243,.14),transparent 36%),
-  radial-gradient(ellipse at 80% 38%,rgba(129,174,218,.12),transparent 34%),
-  radial-gradient(circle,rgba(233,243,252,.62) 0 1px,transparent 1.6px),
-  radial-gradient(circle,rgba(206,225,244,.42) 0 1px,transparent 1.7px);
- background-size:auto,auto,83px 83px,127px 127px;
- background-position:center,center,0 0,36px 21px;
- animation:winterSnowDrift 30s linear infinite;opacity:.8
-}
-#home .hero:after{
- content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
- background:linear-gradient(112deg,transparent 22%,rgba(226,239,252,.035) 49%,transparent 64%);
- background-size:220% 100%;animation:winterAurora 16s ease-in-out infinite
-}
+#home .hero:before{display:none!important;content:none!important;background:none!important}
+#home .hero:after{display:none!important;content:none!important;background:none!important}
 @keyframes winterSnowDrift{to{background-position:center,center,83px 166px,-91px 148px}}
 @keyframes winterAurora{0%,100%{background-position:110% 0}50%{background-position:-120% 0}}
 #home .hero-content{position:relative;z-index:1;width:min(100%,950px);margin:auto}
@@ -1242,18 +1228,18 @@ header{border-bottom-color:#425d78!important}
 }
 .pill{border-color:#927d58!important}
 </style><style id="frb-march-video-hero">
-#home .hero{background:linear-gradient(115deg,rgba(7,18,31,.70),rgba(11,25,42,.42) 56%,rgba(7,18,31,.68))!important}
+#home .hero{background:none!important}
 #home .hero-video-wrap{position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none;background:#0b1b2b}
 #home .hero-video{display:block;width:100%;height:100%;object-fit:cover;object-position:center 53%;opacity:1;filter:saturate(.82) contrast(1.08);transform:scale(1.035)}
-#home .hero-video-wrap:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,17,29,.48),rgba(6,17,29,.13) 35%,rgba(6,17,29,.08) 62%,rgba(6,17,29,.60))}
+#home .hero-video-wrap:after{display:none!important;content:none!important;background:none!important}
 #home .hero:before{z-index:1;opacity:.58}
 #home .hero:after{z-index:1}
 #home .hero-content{z-index:2}
 #home .hero-motion-toggle{min-width:150px;border-color:#a78348!important;background:rgba(12,28,44,.72)!important;color:#f4e8ca!important}
 #home .hero-motion-toggle:hover{background:#29435a!important;border-color:#e0c078!important}
 @media(max-width:720px){#home .hero-video{object-position:center 50%;opacity:1}#home .hero-actions .hero-motion-toggle{min-width:0}}
-@media(prefers-reduced-motion:reduce){#home .hero-video{display:none}}
-</style><script id="frb-video-motion-accessibility">(()=>{const v=document.getElementById("hero-background-video");if(v&&window.matchMedia("(prefers-reduced-motion: reduce)").matches)v.pause()})();</script><style id="frb-video-width-blue-timers">
+@media(prefers-reduced-motion:reduce){#home .hero-video{display:block!important}}
+</style><style id="frb-video-width-blue-timers">
 /* Align the cinematic hero with the page content */
 #home .hero{
  width:100%!important;max-width:1280px!important;min-height:clamp(560px,76svh,790px)!important;
@@ -1446,7 +1432,7 @@ select option{background:#12283c;color:#f3f7fb}
  .primary-timers .timer,.bear-card .timer{font-size:clamp(30px,9vw,40px)!important}
  .grid>.card,.grid>article.card{height:auto}
 }
-@media(prefers-reduced-motion:reduce){#home .hero-video{display:none}}
+@media(prefers-reduced-motion:reduce){#home .hero-video{display:block!important}}
 </style><style id="frb-final-gradient-refine">
 /* Timers: nearly solid midnight navy, with only a restrained lift at the far edge */
 .primary-timers>.card{
@@ -1520,21 +1506,16 @@ header .brand-sub,.brand-sub{
  text-shadow:0 0 10px rgba(83,165,222,.20)!important
 }
 </style>
-<style id="frb-hero-background-fallback">
-/* Keep the heroes artwork visible whenever autoplay video is unavailable or reduced motion is enabled. */
-#home .hero{
- background:linear-gradient(115deg,rgba(7,18,31,.50),rgba(11,25,42,.28) 56%,rgba(7,18,31,.52)),url("assets/alliance-march-poster.png") center 50%/cover no-repeat!important
-}
-/* Replace the older snow-dot overlay with a soft readable tint over the heroes. */
-#home .hero:before{
- background:linear-gradient(180deg,rgba(7,18,31,.12),rgba(7,18,31,.18) 54%,rgba(7,18,31,.42))!important;
- animation:none!important;opacity:1!important
-}
-#home .hero:after{animation:none!important}
-@media(prefers-reduced-motion:reduce){
- #home .hero-video{display:none!important}
- #home .hero:before,#home .hero:after{animation:none!important}
-}
+
+<style id="frb-hero-video-authoritative">
+/* One source for the home hero background: the supplied MP4 video. */
+#home .hero{position:relative!important;isolation:isolate!important;overflow:hidden!important;background:transparent!important}
+#home .hero:before,#home .hero:after{display:none!important;content:none!important;background:none!important;animation:none!important}
+#home .hero-video-wrap{display:block!important;position:absolute!important;inset:0!important;z-index:0!important;overflow:hidden!important;background:transparent!important;border-radius:inherit!important;pointer-events:none!important}
+#home .hero-video-wrap:before,#home .hero-video-wrap:after{display:none!important;content:none!important;background:none!important}
+#home .hero-video{display:block!important;position:absolute!important;inset:0!important;z-index:0!important;width:100%!important;height:100%!important;object-fit:cover!important;object-position:center 53%!important;opacity:1!important;visibility:visible!important;filter:none!important;transform:none!important}
+#home .hero-content{position:relative!important;z-index:2!important}
+@media(prefers-reduced-motion:reduce){#home .hero-video{display:block!important}}
 </style>
 </body></html>
 
