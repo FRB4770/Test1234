@@ -500,6 +500,25 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{ou
 #homepage-server-timeline .timeline-stop[data-key="gen9"] .stop-icon{background:radial-gradient(circle at 28% 22%,#fff0bc66,transparent 46%),linear-gradient(211deg,#3e6b8e,#1c3b58 76%)}
 #homepage-server-timeline .timeline-detail[data-key="gen9"]{background:radial-gradient(circle at 60% 52%,rgba(232,200,120,.26),transparent 18%),linear-gradient(20deg,#315879,#244562 69%,#1b3853)}
 </style>
+
+<style id="homepage-server-timeline-glass-blue-outline">
+/* Transparent #FFD700 glass surface with the site's glossy blue outline. */
+#homepage-server-timeline .timeline-panel{
+ border:1px solid transparent;
+ background:linear-gradient(135deg,rgba(255,215,0,.12),rgba(255,215,0,.07) 52%,rgba(255,215,0,.11)) padding-box,linear-gradient(112deg,#dcedfb 0%,#71a9d4 19%,#c8e5fb 38%,#315879 58%,#acd0f4 78%,#4b7da4 100%) border-box;
+ -webkit-backdrop-filter:blur(12px) saturate(125%);backdrop-filter:blur(12px) saturate(125%);
+ box-shadow:0 0 0 1px rgba(118,176,218,.58),0 0 13px rgba(82,149,198,.5),0 0 28px rgba(49,88,121,.3),0 10px 34px rgba(1,8,18,.3),inset 0 1px 0 rgba(255,255,255,.23)
+}
+#homepage-server-timeline .timeline-panel:hover{box-shadow:0 0 0 1px rgba(210,236,255,.88),0 0 18px rgba(113,169,212,.65),0 0 32px rgba(49,88,121,.34),0 10px 34px rgba(1,8,18,.3),inset 0 1px 0 rgba(255,255,255,.3)}
+#homepage-server-timeline .timeline-heading h2{color:#f5f8fc;text-shadow:0 1px 5px rgba(9,27,43,.45)}
+#homepage-server-timeline .timeline-subtitle{color:#e2ebf3}
+#homepage-server-timeline .timeline-caveat{color:#cfdae4}
+#homepage-server-timeline .timeline-date-control{color:#edf4fa}
+#homepage-server-timeline .timeline-stop .stop-day{color:#f1f6fb;text-shadow:0 1px 5px rgba(9,27,43,.48)}
+#homepage-server-timeline .timeline-stop .stop-label{color:#e0eaf2;text-shadow:0 1px 4px rgba(9,27,43,.44)}
+#homepage-server-timeline .timeline-legend{color:#dce8f1}
+@media(prefers-reduced-motion:reduce){#homepage-server-timeline .timeline-panel{transition:none}}
+</style>
 </head>
 <body>
 <header><nav>
