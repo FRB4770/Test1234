@@ -256,7 +256,7 @@ header{background:rgba(16,9,26,.96);border-bottom-color:#493457}
 </style>
 <style>
 .bear-card{background:linear-gradient(125deg,#29183c 0%,#20142f 65%,#302235 100%)!important;border-color:#795992!important}.bear-card .tag{color:#d9bdf0}.bear-card .timer{color:#f1e7ff}.bear-card small{color:#c6b8d2}.gift-preview{margin:18px 0}.gift-preview .sectionhead{margin:8px 0}.gift-stats{grid-template-columns:repeat(3,1fr);margin:15px 0}.gift-stats .timer{font-size:30px}.gift-code-card{min-height:0;padding:14px}.gift-code-text{font-size:20px;font-weight:850;letter-spacing:.08em;overflow-wrap:anywhere}.gift-meta{font-size:12px;color:var(--muted);line-height:1.5}.gift-history{font-size:12px}.gift-admin label{display:block}.gift-code-grid{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}@media(max-width:720px){.gift-stats{grid-template-columns:1fr}}
-</style><link rel="icon" type="image/gif" href="assets/frb-logo-blue-gold.gif">
+</style><link rel="icon" type="image/png" href="assets/frb-logo-circular-transparent.png">
 <style id="gift-center-original-frb-palette">
 #giftcenter .gift-info,#giftcenter .gift-maintainer-tools{background:linear-gradient(145deg,#261737,#1a1029);border-color:#58406f;box-shadow:0 8px 24px #08040d33}
 #giftcenter .gift-counts{color:#c0b3ce}
@@ -771,10 +771,19 @@ header nav #gtranslate_wrapper .gt_selector:focus,header nav #gtranslate_wrapper
 header nav #gtranslate_wrapper,header nav #gtranslate_wrapper *{outline-color:#e6bd52!important}
 header nav #gtranslate_wrapper .gt_selector,header nav #gtranslate_wrapper select,header nav select.lang,header nav #gtranslate_wrapper .gt_selector:hover,header nav #gtranslate_wrapper select:hover,header nav select.lang:hover,header nav #gtranslate_wrapper .gt_selector:focus,header nav #gtranslate_wrapper select:focus,header nav select.lang:focus,header nav #gtranslate_wrapper .gt_selector:focus-visible,header nav #gtranslate_wrapper select:focus-visible,header nav select.lang:focus-visible{border-color:#e6bd52!important;outline:0!important;box-shadow:inset 0 2px 0 rgba(255,255,255,.78),inset 0 -3px 5px rgba(117,73,9,.28),0 0 0 1px rgba(255,221,124,.48),0 3px 9px rgba(4,10,20,.28)!important;filter:none!important}
 </style>
+<style id="timeline-hide-inline-today-counter">
+#home #homepage-server-timeline .timeline-current,#home #homepage-server-timeline .timeline-current-label{display:none!important}
+</style>
+<style id="timeline-larger-day-badge-top-date-control">
+#home #homepage-server-timeline .timeline-heading{padding-right:260px}
+#home #homepage-server-timeline .timeline-day-badge{display:inline-flex;align-items:center;min-height:42px;padding:9px 16px!important;border-radius:9px;font-size:18px!important;line-height:1.15;box-shadow:0 3px 10px rgba(25,55,81,.34),inset 0 1px rgba(255,255,255,.38)!important}
+#home #homepage-server-timeline .timeline-date-control{position:absolute;z-index:5;top:20px;right:22px;display:flex;align-items:center;gap:9px;white-space:nowrap}
+@media(max-width:760px){#home #homepage-server-timeline .timeline-heading{padding-right:0}#home #homepage-server-timeline .timeline-date-control{position:static;align-self:flex-end;margin-left:auto}#home #homepage-server-timeline .timeline-tools{align-items:stretch;flex-direction:column}#home #homepage-server-timeline .timeline-caveat{order:0}#home #homepage-server-timeline .timeline-date-control{order:-1}}
+</style>
 </head>
 <body>
 <header><nav>
-<div class="brand"><span class="brand-mark" role="img" aria-label="FRB logo" title="FRB"><img src="assets/frb-logo-blue-gold.gif" alt="FRB"></span> <span class="brand-sub">United We Rise.</span></div>
+<div class="brand"><span class="brand-mark" role="img" aria-label="FRB logo" title="FRB"><img src="assets/frb-logo-circular-transparent.png" alt="FRB"></span> <span class="brand-sub">United We Rise.</span></div>
 <button class="navbtn active" data-page="home" data-i="home">Home</button>
 <button class="navbtn" data-page="knowledge">WikiWOS</button>
 <button class="navbtn" data-page="events" data-i="events">Events</button>
@@ -802,18 +811,6 @@ header nav #gtranslate_wrapper .gt_selector,header nav #gtranslate_wrapper selec
   <div class="card sunfire-card"><span class="tag"> SUNFIRE CASTLE – FIRST BATTLE</span><h3>Defend Phase</h3><div class="timer" id="sunfire-countdown">--d --:--:--</div><small class="muted" id="sunfire-schedule">Next battle · 2026-12-08 12:00 UTC</small><button class="timer-settings" type="button" aria-label="Edit Sunfire Castle schedule" title="Edit schedule" onclick="openTimerSettings('sunfire')">⚙</button><small class="muted">Controlled by Phaethon Mercenaries</small></div>
 </div>
 </div>
-<div class="info-timers">
-  <div class="info-card pet-info">
-    <span class="info-label">⚡ PET STAMINA</span>
-    <strong>120</strong>
-    <small>Base stamina · Information only</small>
-  </div>
-  <div class="info-card lighthouse-info">
-    <span class="info-label">✦ LIGHTHOUSE INTEL</span>
-    <strong>00:00 · 08:00 · 16:00</strong>
-    <small>UTC schedule · Information only</small>
-  </div>
-</div>
 <div class="bear-timers" aria-label="Bear Trap countdowns">
   <article class="bear-card">
     <span class="tag">🐻 BEAR TRAP 1</span>
@@ -827,6 +824,18 @@ header nav #gtranslate_wrapper .gt_selector,header nav #gtranslate_wrapper selec
     <small id="bear-trap-2-schedule">2026-11-19 12:00 UTC · 30 min · every 2 days</small>
     <button class="timer-settings" type="button" aria-label="Edit Bear Trap 2 schedule" title="Edit schedule" onclick="openTimerSettings('bear2')">⚙</button>
   </article>
+</div>
+<div class="info-timers">
+  <div class="info-card pet-info">
+    <span class="info-label">⚡ PET STAMINA</span>
+    <strong>120</strong>
+    <small>Base stamina · Information only</small>
+  </div>
+  <div class="info-card lighthouse-info">
+    <span class="info-label">✦ LIGHTHOUSE INTEL</span>
+    <strong>00:00 · 08:00 · 16:00</strong>
+    <small>UTC schedule · Information only</small>
+  </div>
 </div>
 <div class="sectionhead"><h2 data-i="featured">Featured guides</h2><span class="pill public" data-i="publiclabel">PUBLIC</span></div><div class="grid" id="featured"></div>
 <section class="card gift-preview"><span class="tag">FRB GIFT CODE CENTER</span><div class="sectionhead"><div><h2>Gift codes</h2><p>Codes saved in this browser</p></div><button class="action primary" onclick="document.querySelector('[data-page=giftcenter]').click()">Open Gift Code Center →</button></div><div class="toolbar"><span class="pill" id="gift-preview-active">0 active</span><span class="pill" id="gift-preview-expired">0 expired</span><span class="muted" id="gift-preview-latest">No codes yet</span></div></section>
